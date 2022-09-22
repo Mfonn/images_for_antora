@@ -53,7 +53,13 @@ The ChRIS documentation is written using markdown, in other to convert to asciid
   - Run `npx antora --fetch antora-playbook.yml`
   - It should say, "Site generation completed" 
   - Open the link generated in your browser
-
+  
+  
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 ## FOR MULTIPLE REPOSITORIES (STEPS I USED TO CREATE MULTIPLE REPOSITORIES)
@@ -102,17 +108,27 @@ The ChRIS documentation is written using markdown, in other to convert to asciid
 - add the url of the repository you pushed the changes to the antora playbook.yml
 
 ![syntax of url link](antora_url.png "syntax of url")
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
-## Styling The Antora Pages
+## STYLING THE ANTORA PAGES
 
 The Antora pages are hosted on github pages and the css is gotten from one folder. When building the site, antora creates a site.css file where all the css is hosted. Editing this file, edits the css of the page. 
 
 ![syntax of build file](antora_build.png "syntax of build file")
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
-## Versioning the Antora Pages
+## VERSIONING THE ANTORA PAGES
 
 Antora has a feature that allows both past and present versions of a page to be available. <br>
 To add a new version, in the `github pages` branch, in the ChRIS docs folder, create a new file containing the changes. <br>
