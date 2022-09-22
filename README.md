@@ -18,26 +18,35 @@ The ChRIS documentation is written using markdown, in other to convert to asciid
   `sudo apt-get install -y asciidoctor`
 
 ## Installing Kramdown
-  - Install kramdown
-  `sudo gem install kramdown-asciidoc`
+  - Install kramdown <br>
+  `sudo gem install kramdown-asciidoc` <br>
   - Convert the markdown file to adoc using the syntax:
-    ` kramdoc --format=GFM \
-      --output=FILENAME.adoc \
-      --wrap=ventilate \
-      FILENAME.md`
+    ```
+    kramdoc --format=GFM \ 
+      --output=FILENAME.adoc \ 
+      --wrap=ventilate \ 
+      FILENAME.md
+      ``` 
       
       
   ## To open the page on your local host using
   - Clone the repository, antora branch using 
-  `git clone -b  antora  <link to repository>` 
+  ```
+  git clone -b  antora  <link to repository>
+  ``` 
   
   In this case it will be:
   
-  `git clone -b antora https://github.com/Mfonn/CHRIS_docs.git`
+  ```
+  git clone -b antora https://github.com/Mfonn/CHRIS_docs.git
+  ```
   
   - cd into the repository
   - Install Antora and required packages 
-      `node -e "fs.writeFileSync('package.json', '{}')" && npm i -D -E @antora/cli@3.0 @antora/site-generator@3.0`
+     ```
+     node -e "fs.writeFileSync('package.json', '{}')" && npm i -D -E @antora/cli@3.0 @antora/site-generator@3.0
+     
+     ```
   - confirm the following files are present: 
       -antora-playbook.yml
       -antora.yml
@@ -50,26 +59,35 @@ The ChRIS documentation is written using markdown, in other to convert to asciid
 ## FOR MULTIPLE REPOSITORIES (STEPS I USED TO CREATE MULTIPLE REPOSITORIES)
 - clone the repository locally
 
- `git clone -b antora https://github.com/Mfonn/CHRIS_docs.git`
+ ```
+ git clone -b antora https://github.com/Mfonn/CHRIS_docs.git
+ ```
  
  
 - install asciidoc
 
-  `sudo apt-get install -y asciidoctor`
+  ```
+  sudo apt-get install -y asciidoctor
+  ```
 
 - changed markdown to adoc using kramdown
 
-   ` kramdoc --format=GFM \
-      --output=FILENAME.adoc \
-      --wrap=ventilate \
-      FILENAME.md`
+   ``` 
+   kramdoc --format=GFM \ 
+      --output=FILENAME.adoc \ 
+      --wrap=ventilate \ 
+      FILENAME.md
+      ``` 
       
 
 - install antora
 
-  `node -e "fs.writeFileSync('package.json', '{}')" && npm i -D -E @antora/cli@3.0 @antora/site-generator@3.0`
+  ```
+  node -e "fs.writeFileSync('package.json', '{}')" && npm i -D -E @antora/cli@3.0 @antora/site-generator@3.0
+  ```
   
-- create antora-playbook.yml file and the antora.yml file using the syntax in the documentation. [Link to antora playbook syntax](https://docs.antora.org/antora/latest/playbook/set-up-playbook/)
+- create antora-playbook.yml file and the antora.yml file using the syntax in the documentation. <br> 
+[Link to antora playbook syntax](https://docs.antora.org/antora/latest/playbook/set-up-playbook/)
 
 - In the main folder, create the following folders a `pages` folder contained in a `root` folder which is contained in a `modules` folder.
 
@@ -92,3 +110,14 @@ The ChRIS documentation is written using markdown, in other to convert to asciid
 The Antora pages are hosted on github pages and the css is gotten from one folder. When building the site, antora creates a site.css file where all the css is hosted. Editing this file, edits the css of the page. 
 
 ![syntax of build file](antora_build.png "syntax of build file")
+
+
+## Versioning the Antora Pages
+
+Antora has a feature that allows both past and present versions of a page to be available. <br>
+To add a new version, in the `github pages` branch, in the ChRIS docs folder, create a new file containing the changes.
+![image of new file](new-file.png)
+
+In the html, add a link to the new version. 
+
+![image of version link](version.png)
