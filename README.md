@@ -115,9 +115,13 @@ The Antora pages are hosted on github pages and the css is gotten from one folde
 ## Versioning the Antora Pages
 
 Antora has a feature that allows both past and present versions of a page to be available. <br>
-To add a new version, in the `github pages` branch, in the ChRIS docs folder, create a new file containing the changes.
+To add a new version, in the `github pages` branch, in the ChRIS docs folder, create a new file containing the changes. <br>
 ![image of new file](new-file.png)
 
 In the html, add a link to the new version. 
 
 ![image of version link](version.png)
+
+This will show up on the page as:
+
+![image of version on page](version2.png)
