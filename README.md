@@ -1,4 +1,4 @@
-# The published site of the ChRIS documentation is hosted at: https://mfonn.github.io/CHRIS_docs/
+# The published site of the ChRIS documentation is hosted [here](https://mfonn.github.io/CHRIS_docs/)
 
 ## CONVERTING MARKDOWN TO ADOC
 
