@@ -11,15 +11,73 @@ AsciiDoc is a lightweight markup language that is used as a popular tool for gen
 
 
 
-
 The ChRIS documentation is written using markdown, in other to convert to asciidoc: 
   - Install asciidoctor, Asciidoctor is a Ruby-based text processor for parsing asciidoc into a document model and converting it to output format such as html. 
   
   `sudo apt-get install -y asciidoctor`
+  
+ 
+ ## Installing Asciidoctor on Windows OS.
+Installing asciidoctor on Windows OS can be really time consuming but once you know the steps, its really easy. I will be walking you through the steps.
+
+## Installing Chocolatey
+To install asciidoctor on Windows OS, you need to use chocolatey. Chocolatey is a Windows counterpart to the Linux apt package manager or yum package. The software CLI-based package installation and management in windows with the community-maintained package repository. Chocolatey simplifies and automates the process of installing software and keeping it up to date.
+
+Feel free to skip the installation process if you already use chocolatey on your system.
+
+- Using the command-line interface:
+
+- Open your command prompt or type "cmd" on your windows search panel and run as administrator
+- Run the following command:
+```
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" &amp;&amp; SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+```
+- Wait for the installation process to finish. 
+In your command prompt, after chocolatey installs, you wil see:
+
+Chocolatey (choco.exe) is now ready. To verify, run choco or choco-?
+
+**Likely errors you might encounter:**
+1. Warning: Setting chocolatey Install Environment on User and not system variables. This is due to either non-admin install ie the process you are running is not being run as an administrator. Switch to administrator and run.
+
+2. Microsoft.Powershell_profile.ps1 cannot be loaded. The file is not digitally assigned. If you are seeing this, your PowerShell execution policy is either All-Assigned or Restricted. To solve this:
+Ensure that the Get-ExecutionPolicy is not Restricted. To check the status, run:
+```
+Get-ExecutionPolicy
+```
+  ![execution-policy-restricted](https://user-images.githubusercontent.com/99693156/196053785-9adcede7-24fe-4414-85e6-e3defa1c0a2e.png)
+  
+  In the example above, the execution policy is restricted. If its not restricted, proceed with instalation. If it is, unrestrict the PowerShell ExecutionPolicy by running the following command:
+  ```
+  Set-ExecutionPolicy AllSigned
+  ```
+  When prompted, type Y to change the execution policy and press Enter to confirm.
+  
+  ## Installing Asciidoctor for Window OS users - Next Steps.
+  After installing chocolatey, these were the steps I took to install asciidoctor with windows os:
+  
+  - Run the following command to install ruby
+```
+choco install ruby
+```
+- Install ascidoctor using gem
+```
+gem install asciidoctor
+```
+- To confirm that asciidoctor is available, use
+```
+asciidoctor --version
+```
+You should see information about the Asciidoctor version and your Ruby environment printed in the terminal.
+
+**Check steps for installing antora below**
 
 ## Installing Kramdown
   - Install kramdown <br>
   `sudo gem install kramdown-asciidoc` <br>
+  - For Windows
+`gem install kramdown-asciidoc`
+
   - Convert the markdown file to adoc using the syntax:
     ```
     kramdoc --format=GFM \ 
