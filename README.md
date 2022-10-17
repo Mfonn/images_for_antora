@@ -178,6 +178,8 @@ You should see information about the Asciidoctor version and your Ruby environme
 
 The Antora pages are hosted on github pages and the css is gotten from one folder. When building the site, antora creates a site.css file where all the css is hosted. Editing this file, edits the css of the page. 
 
+The antora css is gotten from the `antora` branch, in the `build/site` folder in the `-` folder.
+
 ![syntax of build file](antora_build.png "syntax of build file")
 <br>
 <br>
