@@ -17,7 +17,7 @@ The ChRIS documentation is written using markdown, in other to convert to asciid
   `sudo apt-get install -y asciidoctor`
   
  
- ## Installing Asciidoctor on Windows OS.
+# Installing Asciidoctor on Windows OS.
 Installing asciidoctor on Windows OS can be really time consuming but once you know the steps, its really easy. I will be walking you through the steps.
 
 ## Installing Chocolatey
